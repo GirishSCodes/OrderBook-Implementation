@@ -9,7 +9,7 @@ class Order {
     public:
     Order()
     {
-        cout<<"Enter OrderId,Price,quantity,type\n\n";
+        cout<<"Enter OrderId,Price,quantity,type\n";
 
         cin>>OrderId;
         cin>>Price;
@@ -62,13 +62,13 @@ class OrderBook {
                 if(buyOrder->second.second==0)
                 {
                     cout<<"Buy ID "<<buyOrder->second.first <<" fully executed\n\n";
-                    buy.erase(buy.begin());
+                    buy.erase(buy.begin()++);
                 }
 
                 if(sellOrder->second.second==0)
                 {
                     cout<<"Sell ID "<<sellOrder->second.first <<" fully executed\n\n";
-                    sell.erase(sell.begin());
+                    sell.erase(sell.begin()++);
                 }
                 
             }
@@ -83,7 +83,7 @@ int main() {
     while(true)
     {
         cout<<"1 : place order\n";
-        cout<<"0 : exit\n";
+        cout<<"0 : exit";
 
         int a;
         cin>>a;
